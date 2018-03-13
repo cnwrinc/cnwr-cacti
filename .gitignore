@@ -7,3 +7,4 @@ spec/fixtures/m*
 vendor
 *.lock
 coverage/*
+bin/*
