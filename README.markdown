@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/cnwrinc/cnwr-cacti.svg?branch=master)](https://travis-ci.org/cnwrinc/cnwr-cacti)
 [![Coverage Status](https://coveralls.io/repos/cnwrinc/cnwr-cacti/badge.svg?branch=master&service=github)](https://coveralls.io/github/cnwrinc/cnwr-cacti?branch=master)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/cnwrinc/cnwr-cacti.svg)](https://forge.puppetlabs.com/cnwrinc/cnwr-cacti)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/cnwrinc/cnwr-cacti.svg)](https://forge.puppetlabs.com/cnwrinc/cnwr-cacti)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/cnwrinc/cnwr-cacti.svg)](https://forge.puppetlabs.com/cnwrinc/cnwr-cacti)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/cnwrinc/cnwr-cacti.svg)](https://forge.puppetlabs.com/cnwrinc/cnwr-cacti)
 
 #### Table of Contents
 
