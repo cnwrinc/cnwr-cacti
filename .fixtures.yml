@@ -1,9 +1,8 @@
 fixtures:
   repositories:
     stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
-    mysql:
-      repo: "https://github.com/puppetlabs/puppetlabs-mysql.git"
-      ref: "fa66b38b588"
-    cron: "https://github.com/roman-mueller/rmueller-cron.git"
+    mysql: "https://github.com/puppetlabs/puppetlabs-mysql.git"
+    cron: "https://github.com/voxpupuli/puppet-cron"
+    php: "https://github.com/voxpupuli/puppet-php.git"
   symlinks:
     cacti: "#{source_dir}"
