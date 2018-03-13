@@ -3,10 +3,11 @@
 # This class is called from cacti for install.
 #
 class cacti::install (
-  $cacti_package  = $::cacti::cacti_package,
-  $configure_epel = $::cacti::configure_epel,
-  $configure_php  = $::cacti::configure_php,
-  $php_timezone   = $::cacti::php_timezone,
+  $cacti_package    = $::cacti::cacti_package,
+  $configure_epel   = $::cacti::configure_epel,
+  $configure_php    = $::cacti::configure_php,
+  $php_timezone     = $::cacti::php_timezone,
+  $managed_services = $::cacti::managed_services,
 ){
 
   package { $cacti_package:
@@ -25,6 +26,7 @@ class cacti::install (
     }
 
     class { '::php':
+      notify   => Service[$managed_services],
       settings => {
         'Date/date.timezone' => $php_timezone,
       }
