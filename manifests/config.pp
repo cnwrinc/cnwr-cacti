@@ -24,7 +24,7 @@ class cacti::config inherits cacti{
       'defnode nomodauthzcore Directory[arg="/usr/share/cacti/"]/IfModule[arg="!mod_authz_core.c"] ""',
       'set $nomodauthzcore/directive[.="Allow"]/arg[2] "all"',
     ],
-    notify => Service[$::cacti::managed_services],
+    notify  => Service[$::cacti::managed_services],
   }
 
   cron::job { 'cacti':
