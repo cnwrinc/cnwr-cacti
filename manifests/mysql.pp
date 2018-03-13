@@ -30,7 +30,7 @@ class cacti::mysql(
     password => $::cacti::database_pass,
     host     => $::cacti::database_host,
     grant    => ['ALL'],
-    sql      => '/usr/share/doc/cacti-1.1.10/cacti.sql',
+    sql      => glob('/usr/share/doc/cacti-*/cacti.sql'),
     charset => 'utf8',
     collate => 'utf8_general_ci',
     notify => Exec['patch MySQL TimeZone support'],
