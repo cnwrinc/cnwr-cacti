@@ -37,7 +37,7 @@ class cacti::mysql(
     password => $database_pass,
     host     => $database_host,
     grant    => ['ALL'],
-    sql      => glob('/usr/share/doc/cacti-*/cacti.sql'),
+    sql      => '/usr/share/doc/cacti-*/cacti.sql',
     charset  => 'utf8',
     collate  => 'utf8_general_ci',
     require  => Package[$cacti_package],

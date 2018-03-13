@@ -1,6 +1,5 @@
 fixtures:
   repositories:
-    stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
     mysql: "https://github.com/puppetlabs/puppetlabs-mysql.git"
     cron: "https://github.com/voxpupuli/puppet-cron"
     php: "https://github.com/voxpupuli/puppet-php.git"
