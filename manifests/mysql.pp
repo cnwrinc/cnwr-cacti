@@ -3,7 +3,12 @@
 # This class is called from cacti for database config.
 # git@github.com:puppetlabs/puppetlabs-mysql.git
 class cacti::mysql(
-  $override_options = {
+  $database_root_pass = $::cacti::database_root_pass,
+  $database_user      = $::cacti::database_user,
+  $database_pass      = $::cacti::database_pass,
+  $database_host      = $::cacti::database_host,
+  $cacti_package      = $::cacti::cacti_package,
+  $override_options   = {
     'mysqld' => {
       'max_heap_table_size'             => Integer($::memory['system']['total_bytes'] * 0.10),
       'max_allowed_packet'              => '16M',
@@ -19,29 +24,29 @@ class cacti::mysql(
       'collation-server'                => 'utf8_general_ci',
     },
   },
-) inherits ::cacti {
+) {
 
   class { '::mysql::server':
-    root_password           => $::cacti::database_root_pass,
+    root_password           => $database_root_pass,
     remove_default_accounts => true,
     override_options        => $override_options,
   }
 
   mysql::db { 'cacti':
-    user     => $::cacti::database_user,
-    password => $::cacti::database_pass,
-    host     => $::cacti::database_host,
+    user     => $database_user,
+    password => $database_pass,
+    host     => $database_host,
     grant    => ['ALL'],
     sql      => glob('/usr/share/doc/cacti-*/cacti.sql'),
     charset  => 'utf8',
     collate  => 'utf8_general_ci',
-    require  => Package[$::cacti::cacti_package],
+    require  => Package[$cacti_package],
   }
 
   mysql::db { 'mysql':
-    user     => $::cacti::database_user,
-    password => $::cacti::database_pass,
-    host     => $::cacti::database_host,
+    user     => $database_user,
+    password => $database_pass,
+    host     => $database_host,
     grant    => ['ALL'],
     charset  => 'utf8',
     collate  => 'utf8_general_ci',

@@ -58,17 +58,19 @@
 #   Defaults to []
 #
 class cacti (
-  $cacti_package = $::cacti::params::cacti_package,
+  $cacti_package      = $::cacti::params::cacti_package,
   $database_root_pass = $::cacti::params::database_root_pass,
-  $database_pass = $::cacti::params::database_pass,
-  $database_user = $::cacti::params::database_user,
-  $database_host = $::cacti::params::database_host,
-  $database_type = $::cacti::params::database_type,
-  $database_default = $::cacti::params::database_default,
-  $database_port = $::cacti::params::database_port,
-  $database_ssl = $::cacti::params::database_ssl,
-  $managed_services = $::cacti::params::managed_services,
-
+  $database_pass      = $::cacti::params::database_pass,
+  $database_user      = $::cacti::params::database_user,
+  $database_host      = $::cacti::params::database_host,
+  $database_type      = $::cacti::params::database_type,
+  $database_default   = $::cacti::params::database_default,
+  $database_port      = $::cacti::params::database_port,
+  $database_ssl       = $::cacti::params::database_ssl,
+  $managed_services   = $::cacti::params::managed_services,
+  $configure_epel     = $::cacti::params::configure_epel,
+  $configure_php      = $::cacti::params::configure_php,
+  $php_timezone       = $::cacti::params::php_timezone,
 ) inherits ::cacti::params {
 
   validate_string($cacti_package)
