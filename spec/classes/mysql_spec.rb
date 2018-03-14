@@ -41,7 +41,7 @@ describe 'cacti::mysql' do
                   "password"=>"cacti_password",
                   "host"=>"localhost",
                   "grant"=>["ALL"],
-                  "sql"=>"/usr/share/doc/cacti-0.8.8b/cacti.sql"})
+                  "sql"=>"/usr/share/doc/cacti-*/cacti.sql"})
         end
       end
     end
