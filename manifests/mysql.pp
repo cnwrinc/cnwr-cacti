@@ -10,12 +10,12 @@ class cacti::mysql(
   $cacti_package      = $::cacti::cacti_package,
   $override_options   = {
     'mysqld' => {
-      'max_heap_table_size'             => Integer($::memory['system']['total_bytes'] * 0.10),
+      'max_heap_table_size'             => $::memory['system']['total_bytes'] * 0.10,
       'max_allowed_packet'              => '16M',
       'tmp_table_size'                  => '64M',
       'join_buffer_size'                => '64M',
       'innodb_file_per_table'           => 'ON',
-      'innodb_buffer_pool_size'         => Integer($::memory['system']['total_bytes'] * 0.25),
+      'innodb_buffer_pool_size'         => $::memory['system']['total_bytes'] * 0.25,
       'innodb_doublewrite'              => 'OFF',
       'innodb_additional_mem_pool_size' => '80M',
       'innodb_lock_wait_timeout'        => '50',

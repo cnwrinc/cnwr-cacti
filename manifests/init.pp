@@ -99,11 +99,11 @@ class cacti (
   include ::cacti::config
   include ::cacti::service
 
-  anchor { 'cacti::begin': } ->
-  Class['cacti::install'] ->
-  Class['cacti::mysql'] ->
-  Class['cacti::config'] ->
-  Class['cacti::service'] ->
-  anchor { 'cacti::end': }
+  anchor { 'cacti::begin': }
+  -> Class['cacti::install']
+  -> Class['cacti::mysql']
+  -> Class['cacti::config']
+  -> Class['cacti::service']
+  -> anchor { 'cacti::end': }
 
 }

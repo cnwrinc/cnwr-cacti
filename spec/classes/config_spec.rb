@@ -19,6 +19,11 @@ describe 'cacti::config' do
         let(:facts) do
           facts.merge({
             :root_home => '/root',
+            :memory => {
+              :system => {
+                :total_bytes => 1024
+              }
+            }
           })
         end
         let(:params) do

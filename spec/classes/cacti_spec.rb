@@ -20,6 +20,11 @@ describe 'cacti' do
           let(:facts) do
             facts.merge({
               :root_home => '/root',
+              :memory => {
+                :system => {
+                  :total_bytes => 1024
+                }
+              }
             })
           end
           it { should compile.with_all_deps }

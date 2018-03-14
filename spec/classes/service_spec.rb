@@ -21,6 +21,11 @@ describe 'cacti::service' do
           let(:facts) do
             facts.merge({
               :root_home => '/root',
+              :memory => {
+                :system => {
+                  :total_bytes => 1024
+                }
+              }
             })
           end
           let(:params) do
@@ -42,6 +47,11 @@ describe 'cacti::service' do
           let(:facts) do
             facts.merge({
               :root_home => '/root',
+              :memory => {
+                :system => {
+                  :total_bytes => 1024
+                }
+              }
             })
           end
           let(:params) do

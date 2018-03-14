@@ -29,7 +29,7 @@ class cacti::install (
       notify   => Service[$managed_services],
       settings => {
         'Date/date.timezone' => $php_timezone,
-      }
+      },
     }
   }
 

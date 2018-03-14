@@ -3,5 +3,13 @@ fixtures:
     mysql: "https://github.com/puppetlabs/puppetlabs-mysql.git"
     cron: "https://github.com/voxpupuli/puppet-cron"
     php: "https://github.com/voxpupuli/puppet-php.git"
+    stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+    archive: "https://github.com/voxpupuli/puppet-archive.git"
+    epel: "https://github.com/stahnma/puppet-module-epel.git"
+    inifile: "https://github.com/puppetlabs/puppetlabs-inifile.git"
+    staging: "https://github.com/voxpupuli/puppet-staging.git"
+    translate: "https://github.com/puppetlabs/puppetlabs-translate.git"
+    apt: "https://github.com/puppetlabs/puppetlabs-apt.git"
+    zypprepo: "https://github.com/voxpupuli/puppet-zypprepo.git"
   symlinks:
     cacti: "#{source_dir}"
