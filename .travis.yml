@@ -3,7 +3,10 @@
 sudo: false
 language: ruby
 cache: bundler
-script: "bundle exec rake release_checks"
+before_install:
+  - rm -f Gemfile.lock
+script:
+  - 'bundle exec rake $CHECK'
 matrix:
   fast_finish: true
   include:
