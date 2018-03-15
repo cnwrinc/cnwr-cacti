@@ -1,0 +1,5 @@
+---
+root_home: '/root'
+memory:
+  system:
+    total_bytes: 1024

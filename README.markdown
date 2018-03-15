@@ -1,7 +1,13 @@
 # cacti
 
 [![Build Status](https://travis-ci.org/cnwrinc/cnwr-cacti.svg?branch=master)](https://travis-ci.org/cnwrinc/cnwr-cacti)
+<!--
 [![Coverage Status](https://coveralls.io/repos/cnwrinc/cnwr-cacti/badge.svg?branch=master&service=github)](https://coveralls.io/github/cnwrinc/cnwr-cacti?branch=master)
+-->
+[![Puppet Forge](https://img.shields.io/puppetforge/v/cnwr/cacti.svg)](https://forge.puppetlabs.com/cnwr/cacti)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/cnwr/cacti.svg)](https://forge.puppetlabs.com/cnwr/cacti)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/cnwr/-cacti.svg)](https://forge.puppetlabs.com/cnwr/cacti)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/cnwr/cacti.svg)](https://forge.puppetlabs.com/cnwr/cacti)
 
 #### Table of Contents
 
@@ -28,7 +34,7 @@ The Cacti module installs, configures, and manages all of Cacti's dependencies.
 
 Uses the [puppetlabs-mysql](https://github.com/puppetlabs/puppetlabs-mysql) module to install, manage, and configure mariadb for use with cacti.
 
-Uses [rmueller-cron](https://github.com/roman-mueller/rmueller-cron) to manage /etc/cron.d/cacti.
+Uses [puppet-cron](https://github.com/voxpupuli/puppet-cron) to manage /etc/cron.d/cacti.
 
 
 ## Setup

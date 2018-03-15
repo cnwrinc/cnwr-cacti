@@ -8,8 +8,22 @@
   "project_page": "https://github.com/cnwrinc/cnwr-cacti",
   "issues_url": "https://github.com/cnwrinc/cnwr-cacti/issues",
   "dependencies": [
-    { "name":"puppet/cron", "version_requirement":">=1.1.0" },
-    { "name":"puppetlabs/mysql", "version_requirement":">= 3.6.1" }
+    {
+      "name":"puppet/cron",
+      "version_requirement":">=1.1.0 < 2.0.0"
+    },
+    {
+      "name":"puppetlabs/mysql",
+      "version_requirement":">= 3.6.1 < 6.0.0"
+    },
+    {
+      "name":"stahnma/epel",
+      "version_requirement":">= 1.0.0 < 2.0.0"
+    },
+    {
+      "name":"puppet/php",
+      "version_requirement":">= 5.0.0 < 6.0.0"
+    }
   ],
   "tags": ["cacti"],
   "operatingsystem_support": [
