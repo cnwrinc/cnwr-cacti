@@ -19,6 +19,7 @@ if Dir.exist?(File.expand_path('../../lib', __FILE__))
 end
 
 RSpec.configure do |c|
+  # Setup default facts
   default_facts = {
     puppetversion: Puppet.version,
     facterversion: Facter.version
@@ -26,6 +27,12 @@ RSpec.configure do |c|
   default_facts.merge!(YAML.load(File.read(File.expand_path('../default_facts.yml', __FILE__)))) if File.exist?(File.expand_path('../default_facts.yml', __FILE__))
   default_facts.merge!(YAML.load(File.read(File.expand_path('../default_module_facts.yml', __FILE__)))) if File.exist?(File.expand_path('../default_module_facts.yml', __FILE__))
   c.default_facts = default_facts
+
+  # Move these settings from .rspec
+  c.color = true
+  c.formatter = 'documentation'
 end
+
+at_exit { RSpec::Puppet::Coverage.report! }
 
 # vim: syntax=ruby
